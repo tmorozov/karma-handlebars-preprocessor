@@ -9,9 +9,7 @@ var createHandlebarsPreprocessor = function(logger, basePath) {
     log.debug('Processing "%s".', file.originalPath);
     file.path = file.originalPath.replace(/\.hbs$/, '.js');
 
-    log.error(file.originalPath);
     var templateName = file.originalPath.replace(/^.*javascripts\/(.*)\.hbs$/, '$1');
-    log.error(templateName);
 
     try {
       processed = "(function() {"+
